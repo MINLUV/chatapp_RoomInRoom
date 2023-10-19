@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chat_recyclerView"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/input_layout"
+        />
+
+    <LinearLayout
+        android:id="@id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/message_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="85"
+            android:background="#DD6BFF2B"
+            android:paddingStart="10dp"
+            android:hint="enter your message"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:id="@+id/send_btn"
+            android:layout_weight="15"
+            android:background="@color/cardview_dark_background"
+            android:text="전송"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
