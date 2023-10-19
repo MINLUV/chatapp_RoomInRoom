@@ -4,33 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginAcitvity">
+    tools:context=".SignUpactivity">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/Email"
+        android:id="@+id/name_edit"
+        android:hint="name"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        android:layout_below="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/email_edit"
         android:hint="Email"
-        android:inputType="textEmailAddress"/>
-
+        />
     <EditText
-        android:layout_below="@+id/Email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/Passwd"
-        android:hint="Passwd"
-        android:inputType="textEmailAddress"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/LoginBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Passwd"
-        android:text="Login"/>
+        android:id="@+id/password_edit"
+        android:layout_below="@+id/email_edit"
+        android:hint="password"
+        android:inputType="numberPassword"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUp_btn"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/LoginBtn"
-        android:text="signup"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_edit"
+        android:background="@color/cardview_dark_background"
+        android:text="signup"
+        android:textColor="@color/cardview_light_background"
+        />
 </RelativeLayout>

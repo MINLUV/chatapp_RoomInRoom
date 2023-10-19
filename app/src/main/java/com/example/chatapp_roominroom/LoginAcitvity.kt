@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.chatapp_roominroom.databinding.ActivityLoginAcitvityBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class LoginAcitvity : AppCompatActivity() {
@@ -31,6 +32,11 @@ class LoginAcitvity : AppCompatActivity() {
             val passwd = binding.Passwd.text.toString()
 
             login(email,passwd)
+        }
+
+        binding.signUpBtn.setOnClickListener{
+            val intent: Intent = Intent(this@LoginAcitvity, SignUpactivity::class.java)
+            startActivity(intent)
         }
 
     }
