@@ -1,7 +1,10 @@
 package com.example.chatapp_roominroom
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chatapp_roominroom.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -57,6 +60,21 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean{ // 메뉴를 메인 화면에 보여주기 위하여 재정의
+        menuInflater.inflate(R.menu.menu, menu)
+        return  super.onCreateOptionsMenu(menu)
+    }
 
+    // 로그인 르그아웃 기능 구현
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+         if(item.itemId == R.id.Log_Out){
+             auth.signOut()  //로그아웃
+             val intent =Intent(this@MainActivity, LoginAcitvity::class.java) // 로그아웃 후 로그인 화면으로 돌아가는 기능
+             startActivity(intent)
+             finish()
+             return true
+         }
+        return true
     }
 }
