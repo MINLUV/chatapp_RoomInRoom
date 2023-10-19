@@ -19,7 +19,7 @@
         android:layout_height="50dp"
         android:id="@+id/Passwd"
         android:hint="Passwd"
-        android:inputType="textEmailAddress"/>
+        android:inputType="numberPassword"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/LoginBtn"
         android:layout_width="match_parent"

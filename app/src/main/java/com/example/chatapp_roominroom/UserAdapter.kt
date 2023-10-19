@@ -1,6 +1,7 @@
 package com.example.chatapp_roominroom
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,8 +19,18 @@ class UserAdapter(private val context: Context, private val userList: ArrayList<
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) { //데이터를 전달받아 user_layout에 보여주는 기능 구현
-        val currentUser = userList[position]
-        holder.nameText.text = currentUser.name
+        val currentUser = userList[position] // 데이터 담기
+        holder.nameText.text = currentUser.name // 화면에 데이터 보여주기
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, ChatActivity::class.java)
+
+            //넘길 데이터
+            intent.putExtra("name", currentUser.name)
+            intent.putExtra("uID", currentUser.uid)
+
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int { //userList의 갯수를 리턴해줌
