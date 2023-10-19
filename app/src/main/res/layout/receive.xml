@@ -9,9 +9,10 @@
         android:id="@+id/receive_message_text"
         android:layout_alignParentStart="true"
         android:layout_margin="5dp"
-        android:background="@color/cardview_dark_background"
+        android:background="@drawable/receive_message"
         android:padding="10dp"
         android:text="receivemessage"
         android:textColor="@color/white"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        />
 </RelativeLayout>

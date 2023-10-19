@@ -23,6 +23,9 @@ class SignUpactivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         Dbref = Firebase.database.reference
 
+        //액션바에 상대방 이름 보여주기
+        supportActionBar?.title = "회원가입"
+
         binding.signUpBtn.setOnClickListener{
             val email = binding.emailEdit.text.toString().trim()
             val password = binding.passwordEdit.text.toString().trim()

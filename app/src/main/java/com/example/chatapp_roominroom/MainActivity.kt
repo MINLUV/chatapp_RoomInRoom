@@ -41,6 +41,9 @@ class MainActivity : AppCompatActivity() {
         binding.userRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.userRecyclerView.adapter = adapter
 
+        //액션바에 상대방 이름 보여주기
+        supportActionBar?.title = "사용자 목록"
+
         Dbref.child("user").addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 for(postSnapshot in snapshot.children){

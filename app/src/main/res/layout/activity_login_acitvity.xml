@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".LoginAcitvity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/room"
+        />
     <EditText
+        android:layout_below="@+id/logo_image"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/Email"
